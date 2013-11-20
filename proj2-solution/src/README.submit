@@ -1,0 +1,12 @@
+Kavitaben Sheth
+
+My output is matching with correct output file but I didn't get time to make it robost with good error messages. Its also not very well commented.
+I haven't checked all memory access errors and removed memory leaks.I haven't consider situation when a page is both loved and hated at same time.
+
+Love/Hate replacement policy : Basically I implemented two queue(hatelist & loveList) using doubley circular linked list data structure. 
+it has four operation. In insert function, I am adding new node as head of existing queue. In remove function, for MRU removing from front and for LRU removing from end.
+In lookup function, first checks hatelist, and remove from hatelist. when there is no free frame in hatelist. check lovelist and remove element from tail as 
+its least recentley used list. it returns free frame number. I also implemented print function for debug. 
+
+Why I used doubley liked list? == In Doubley liked list, we can easily access first and last node without any traversal. So, for our case we need to remove,
+first node for MRU and last node for LRU. so, doubley linked list is best choice. 
